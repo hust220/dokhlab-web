@@ -61,6 +61,7 @@
                         echo '<span style="border-width: 1px 1px 1px 1px; border-style: solid; border-color: #666 #666 #666 #666; background: #ccc; font-size: 12px; padding: 1px 3px 1px 3px; margin-top: 10px; margin-right: 10px; float: right" ><strong>News</strong></span>';
                         echo '<div id="news-container" class="newsticker">';
                         echo '<ul id="ticker">';
+                        $ticker = "";
                         if($dh = opendir('news')) {
                             while (false !== ($file = readdir($dh))) {
                                 if(!is_dir($file)) {

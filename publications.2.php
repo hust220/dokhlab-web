@@ -114,7 +114,7 @@
 			foreach ($fullname as $mid=>$fname):
 				if($has_publ[ $mid] == "yes"):
 				  	$tmp[ $dispcnt] = $mid;
-					  $pubcnt = getMemPubs($l_name[ $mid].", ".$f_init".");
+					  $pubcnt = getMemPubs($l_name[ $mid]);
 					if ( $dispcnt<4 ){
 						echo "<li id=\"avl_auth$mid\" style=\"display: block\"><img src=images/expand.gif class=filterimg onclick=\"addFilter('sel_auth$mid'); getFilters('".rtrim($filterlist,",")."','filter');\"> $fname ($pubcnt)</li>\n";
 					} else {

@@ -234,7 +234,6 @@
 		<?php
 			if($has_publ[$_POST['memid']]=="yes") {
 				//$pcnt = getMemPubs(($f_name[$_POST['memid']]).($l_name[$_POST['memid']]));
-				//$pcnt = getMemPubs($l_name[$_POST['memid']].", ".$f_init);
 				//$pcnt = getMemPubs($l_name[$_POST['memid']].", ".$f_name[$_POST['memid][0]]');
 				$pcnt = getMemPubs($l_name[$_POST['memid']]);
 		?>

@@ -62,6 +62,7 @@ while($JC_OBJECT = mysql_fetch_object($QUERY_JC_SELECT)){
 function getGM($m,$d,$y) {
 	global $Date, $Name, $time;
 	$gmstr = "";
+    $gmper = "";
 	$year = date('Y',time());
 	for ($j=0;$j<10;$j++){
 		//echo "in the for";
@@ -90,6 +91,7 @@ function getGM($m,$d,$y) {
 function getJC($m,$d,$y) {
 	global $JC_Date, $JC_Name, $time;
 	$jcstr="";
+    $jcper = "";
 	$year = date('Y',time());
 	for ($j=0;$j<10;$j++){
 		//echo "in the for";

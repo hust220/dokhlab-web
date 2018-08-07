@@ -46,7 +46,6 @@ $currmem = array();
 $hascurr = array();
 $hasform = array();
 $f_name = array();
-$f_init = array();
 $m_init = array();
 $l_name = array();
 $has_publ = array();
@@ -146,7 +145,7 @@ while($row=mysql_fetch_object($result)) {
 
 function getMembers() {
     global $memtable, $pubtable, $categories, $currmem, $members, $hascurr, $hasform, $memid;
-    global $f_name, $f_init, $m_init, $l_name, $has_publ, $current;
+    global $f_name, $m_init, $l_name, $has_publ, $current;
     global $designation, $fullname, $tenure, $email;
     $sql = "SELECT * FROM ".$memtable." ORDER BY f_name ";
     $result = mysql_query($sql);
@@ -166,7 +165,6 @@ function getMembers() {
             $memid[$row->mem_id] = $tuple;
             $fullname[$row->mem_id] = $fname;
             $f_name[$row->mem_id] = $row->f_name;
-            $f_init = $f_name[0];
             $m_init[$row->mem_id] = $row->m_init;
             $l_name[$row->mem_id] = $row->l_name;
             $email[$row->mem_id] = $row->email;
