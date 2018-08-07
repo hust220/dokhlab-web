@@ -1,0 +1,29 @@
+# 04-10-2012 -- added news ticker to the website
+#
+# File format
+# -----------
+# No restrictions on file naming conventions. All files in this directory are read and displayed
+# Lines beginning with a # are ignored
+# First line beginning with a non-hash character is used as the short title
+# Second line beginning with a non-hash character is used as the content
+# All other lines, including empty lines are ignored
+# 
+# This file is only a sample and is not used for display
+#
+#---------------------------------------------------------------------------------------------------
+#
+# 04-16-2012 -- added multiple news item functionality
+#
+# File format
+# -----------
+# Same as above
+# Additionally, you can have more than one news item per file. Every odd-numbered line is considered 
+# as the title and the even-numbered lines are the content
+#
+#---------------------------------------------------------------------------------------------------
+#
+#
+Congratulations Prof. Ding
+Dr. Feng Ding is now an assistant professor in the Department of Physics and Astronomy at Clemson University! Congratulations Feng! 
+Congratulations Prof. Khare
+Dr. Sagar Khare is now an assistant professor in the Department of Chemistry and Chemical Biology at Rutgers university! Congratulations Sagar! 

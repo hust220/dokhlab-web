@@ -1,0 +1,220 @@
+/*--------------------RESET--------------------------*/
+
+
+span, applet, object, iframe,
+h4, h5, h6, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+.pubtype { width: 615px; height: 20px; text-align: left; padding: 2px; margin: 3px; }
+.contentdiv { width: 625px; float: left; }
+
+/*body { line-height: 1; }*/
+ol, ul { list-style: none; }
+blockquote, q {	quotes: none; }
+
+blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
+
+/* remember to define focus styles! */
+:focus { outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/*-----------------BASIC STYLES-----------------*/
+
+/*body { line-height: 19px; font-family: Arial, Verdana, sans-serif; font-size: 13px; color: #7a7575; background-color: #2c2c2c;}*/
+/*body { line-height: 19px; font-family: Arial, Verdana, sans-serif; font-size: 13px; color: #7a7575; background-color: #414141;}*/
+
+/*a { text-decoration: none; color: #949490; }*/
+a:hover { text-decoration: underline; }
+.ui-tabs-hide { display: none; }
+br.clear { margin: 0px; padding: 0px; } 
+
+/* h1, h2, h3, h4, h5, h6 { padding-bottom: 5px; color: #808080; letter-spacing: -1px; line-height: 1em; font-weight: normal; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #808080; }
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3 { font-size: 22px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+ */strong { font-weight: bold; color: #1c1c1c; }
+cite, em, i { font-style: italic; }
+pre, code { font-family: Courier New, monospace; margin-bottom: 10px; }
+ins { text-decoration: none; }
+sup, sub { height: 0; line-height: 1; position: relative; vertical-align: baseline; }
+sup { bottom: 0.8em; }
+sub { top: 0.3em; }
+dl { margin: 0 0 1.5em 0; }
+dl dt { font-weight: bold; }
+dd  { margin-left: 1.5em;}
+blockquote  { margin: 1.5em; padding: 1em; color: #666666; background: #e6e6e6; font-style: italic; border: 1px solid #dcdcdc; }
+	blockquote p { padding-bottom: 0px; }
+
+input[type=text],input.text, input.title, textarea, select { background-color:#fff; border:1px solid #bbb; padding: 2px; color: #4e4e4e; }
+input[type=text]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus { border-color:#2D3940; color: #3e3e3e; }
+input[type=text], input.text, input.title, textarea, select { margin:0.5em 0; }
+textarea { padding: 4px; }
+
+/* p{text-align   : justify; }
+
+img#about-image { float: left; margin: 3px 8px 8px 0px; }
+ */
+.p1{text-align   : justify; line-height  : 1.5em;}
+.firstLetter{
+  display      : block;
+  float        : left;
+  margin-top   : -0.63em; /* use -0.205em for two lines */
+  margin-left  : -0.56em;
+  margin-right : 0.5em;
+  height       : 4.5em;
+  color        : #a0a00b;	
+}
+
+.firstLetter span{
+  font-size    : 5.6em;   /* use 3.33em for two lines */
+  line-height  : 1.0em;
+}
+
+.firstLetter + span{
+  margin-left  : -0.5em;
+}
+
+/*Defining the lists within content*/
+.lists{margin-left:2.56em; margin-top:5px;}
+
+/*Definiing blurb quant*/
+.blurb-head{float:right; margin-top: 15px; margin-bottom:5px; padding-top:10px; padding-bottom:10px; padding-left:5px;  color:#555555; font-size:3em; }
+.blurb-act { width: 790px; height: 20px; text-align: left; padding: 2px; margin: 2px; font-size:1.5em; }
+.blurb-content { width: 790px; text-align: justify; } /*float: right;}*/
+.blurb-text{width: 780px; margin-right: 5px; margin-left: 5px; }/*padding-right:10px; }/*float: right;}*/
+.blurb-body { width: 800px; float: right;}
+.blurb-box{width: 740px; margin-right: 5px;margin-top: 10px; padding:10px 5px 10px 10px; border: 1px dashed #79AF5B; float: right;} /* orange: #F98724*/
+ul.bbox{padding: 0; margin-left: 10px; list-style:circle outside;}
+ul.bbox li {padding-left: 5px;}
+
+.blurb-figure{border: 1px solid #555555; margin-left:5px; padding: 2px; float:right; opacity:0.;}
+
+/* Title for the paragraph */
+.para-title{font-size: 1.2em; color: #555555; font-weight:600; letter-spacing:1px; width:550px}
+
+/*Spacers*/
+.spacer5 { font-size: 1px; min-height: 1px; }
+
+
+/*---------------[MAIN LAYOUT INFO]---------------*/
+
+#container { background: #323232;  min-height: 300px; padding: 0px 0 0px 3%; }
+#header { margin-bottom:50px; margin-top:10px; position:relative; width:1024px;}
+#logo { margin: 10px 0px 15px 0px;}
+/* #menu { background: #323232; margin-bottom:50px; margin-top:20px; position:relative; width: 300px; float: left;} */ /* This has no effect and is counter-productive because the width is set at 300. There is no element with id menu in the html page */
+
+/********* IMPORTANT: 'width' property does not include padding and margin. width must be >= actual width+padding+margin. Do not forget to count padding and margin on both sides. Same applies to height *****/
+/********* EXAMPLE  : width of content = 1024 = width+(2*padding) of bodytext (700) + width+(2*padding) of sidebox(300) -- see below ******/
+.content {width: 1024px; border: 0px solid #666; min-height: 600px; } 
+.bodytext {overflow: auto; overflow-x: hidden; padding: 25px; width: 800px; border: 0px solid #666} /* padding applies to all four sides in the clockwise direction. e.g. padding: 1px 2px 3px 4px; applies 1px on top, 4px on left ; use padding-<left/right/top/bottom> if you do not wish to have padding on the other sides */
+.sidebox {padding: 0px; width: 171px; border: 0px solid #666; float: right } /* added border for bodytext, content and sidebox for illustration only */
+
+#search-form { float: right; background: #242424; width: 190px;height: 30px; }
+input#searchinput { background: #242424; border: none; height: 16px; font-size: 12px; font-style: italic; color: #595959; text-shadow: 1px 1px 1px #000;  padding-left: 5px; width: 150px; float: right; position: relative;}
+input#searchsubmit { background: #242424;  float: right; margin-top:10px; padding-right:5px}
+			
+
+
+/*---------------[CONTACT FORM]---------------*/
+.contact-form           {background: #555555; width:790px;border:1px  solid  #555555;padding: 5px; -moz-border-radius: 15px;border-radius: 15px;}
+.contact-form-submitted {background: #242424; width:770px;border:1px  solid  #555555;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px; color:#595959}			
+
+input.contact-name   {background: #242424; width:300px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px;}
+input.contact-eps    {background: #242424; width:500px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px;}
+.contact-message{background: #242424; width:700px; height: 150px; border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px;}
+input.contact-button {cursor:pointer; background: #242424; width:100px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px; color:#595959}			
+input.contact-button-submit {cursor:pointer; background: #131313; width:100px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px; color:#595959}			
+input.contact-error { border: 1px dashed maroon;}
+.contact-error { border: 1px dashed maroon;}
+
+.captcha{background: #555555;margin-right:50px; float:right; }
+input.captcha{background: #242424; width:20px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px;}
+
+				/*----[EXTENDED CONTACT FORM]----*/
+input.contact-company{background: #242424; width:645px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px;}
+input.phone-cc       {background: #242424; width:100px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px;}
+input.phone          {background: #242424; width:350px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px;}
+
+input.state          {background: #242424; width:150px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px;}
+input.zip            {background: #242424; width:55px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px;}
+
+
+.contact-eps    {background: #242424; width:500px;border:1px  solid  #595959;padding: 15px;margin-right:10px;-moz-border-radius: 15px;border-radius: 15px;}
+.contact-pull   {background: #242424;  color: #CCCCCC; width:250px;border:1px  solid  #595959;padding: 5px;margin-right:10px;-moz-border-radius: 5px;border-radius: 5px; float: right}
+
+/*-----------------[SERVICE TAB]-------------------*/
+.service-tab { cursor: pointer; padding: 5px 10px 0px 10px; margin-top: 10px; margin-right: 25px; border-width: 1px 1px 0px 1px; border-style: solid; border-color: #7c7c7c; border-top-right-radius: 10px; border-top-left-radius: 10px; }
+.service-tab-active { background-color: #2c2c2c; color: #a0a00b ; border-bottom: 0px }
+.service-content { width: 798px; border: 1px solid #7c7c7c; background-color: #2c2c2c; margin-top: 1px; padding: 5px; border-radius: 10px; } /*float: right;}*/
+.service-head{float:right; margin-top: 15px; padding-top:10px; margin-bottom: 10px; color:#555555; font-size:3em; }
+
+
+/*---------------[IMPORTANT NOTE]------------------*/ 
+.special-note {border: #595959 dotted 1px;  font-size: 1.2em; color: #555555; text-align:justify; width:500px; padding: 5px;}
+				
+
+/*---------------[DROPDOWN MENU]------------------*/ 
+ul.nav {list-style: none; padding: 0; margin: 0; float: left;}
+ul.nav li {float: left; position: relative; width: 175px; text-align: center; background: #323232;border:1px dashed #323232}
+ul.nav li a {margin: 0; display: block; font-weight: bold;	padding: 2px 10px; border:1px dashed #323232}
+ul.nav li a:hover { border:1px dashed #79af5c; }
+/*ul.nav li a:hover { border:1px dashed #323232}   NO BORDER*/
+ul.nav li.current a{background:#ddd; }
+ul.nav li.current a:hover{background:#888; }
+
+li ul {display: none; position:absolute; width:100px; top: 18px; left: 0; font-weight: normal; padding: 1px 0 10px 0; margin-left:-1px; opacity:0.9;}
+ul.nav li ul.sub li{border-width:0 1px 1px 1px!important; }
+ul.nav li ul.sub li a{font-weight: normal!important; }
+li>ul {top: auto; left: auto; }
+li:hover ul, li.over ul {display: block;}
+
+/*---------------------[SHADOW]-------------------*/
+.shadow {
+	width:175px;
+	-moz-box-shadow: -3px 3px 2px #222222;
+	-webkit-box-shadow: -3px 3px 2px #222222;
+	box-shadow: -3px 3px 2px #222222;
+
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.blur {
+	-moz-box-shadow: 0px 0px 30px #222222;
+	-webkit-box-shadow: 0px 0px 30px #222222;
+	box-shadow: 0px 0px 30px #222222;
+}
+
+.no-blur {
+	-moz-box-shadow: 0px 0px 0px #323232;
+	-webkit-box-shadow: 0px 0px 0px #323232;
+	box-shadow: 0px 0px 0px #323232;
+}
+
+/*---------------------[FOOTER]-------------------*/
+
+#footer { background: #2c2c2c url(images/footer-lbg.png) repeat-y; }
+	#footer-wrapper { background: url(images/footer-rbg.png) repeat-y top right; padding: 20px 7% 0px; }
+	p#copyright { text-align: right; padding-bottom: 200px; color:#686868; text-shadow: 1px 1px 1px #000; font-size: 12px; }
+		p#copyright a { color:#8c8c8c; font-weight: bold; }
+
+/*---------------------[CLEAR FLOAT]-------------*/
+/*       Must be at the end of the document      */
+.cfloat { clear: both; }
+
+

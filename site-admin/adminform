@@ -1,0 +1,45 @@
+<center>
+	<img src="http://dokhlab.unc.edu/images/W.gif">elcome Administrator !
+</center>
+<form name="login" method=POST value="<?php echo $_SERVER['PHP_SELF'];?>" onsubmit="return validateForm(this)">
+<input type=hidden name=login value=true>
+<?php $page = getPage();?>
+<input type=hidden name="<?php echo $page;?>" value="1">
+<div class=spacer10></div>
+<div class=login>
+<fieldset><legend align=left>Login</legend>
+<table align=center class=text cellpadding=3 border=0>
+	<tr>
+		<td align=right>
+			Username
+		</td>
+		<td width=5 align=center>
+			:
+		</td>
+		<td align=left width=150>
+			<input type=text class="keyword loginpos" name=uname value="">&nbsp;
+		<div id=veruser class="loginerr loginpos"><img id=uimg name=uimg width=17 height=17 src="images/tick.png"></div>
+		</td>
+	</tr>
+	<tr>
+		<td align=right>
+			Password
+		</td>
+		<td width=10 align=center>
+			:
+		</td>
+		<td align=left>
+			<input type=password class="keyword loginpos" name=pword value="">&nbsp;
+			<div id=verpass class="loginerr loginpos"><img id=pimg name=pimg width=17 height=17 src="images/cross.png"></div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=3 align=center>
+		<div class=spacer5></div>
+			<input type=submit class=button name="submit" value="Login">
+		</td>
+	</tr>
+</table>
+</fieldset>
+</div>
+</form>

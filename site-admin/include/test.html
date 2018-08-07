@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+.parentDisable {
+  z-index:999;
+width:100%;
+height:100%;
+display:none;
+position:absolute;
+top:0;
+left:0;
+	 background-color: #ccc;
+color: #aaa;
+opacity: .5;
+filter: alpha(opacity=50);  
+}
+#popup {
+width:200;
+height:100;
+position:absolute;
+top:200px;
+left:200px;
+color: #000;
+	   background-color: #fff;
+}
+</style>
+<script>
+function pop() {
+    document.getElementById('mainDiv').style.display='block';
+	  return false
+}
+function hide() {
+    document.getElementById('mainDiv').style.display='none';
+	  return false
+}
+</script>
+</head>
+<body>
+<div id="mainDiv" class="parentDisable">
+<table border="1" id="popup"><tr><td>   Please <a href="#" onClick="return hide()">click</a></td></tr></table>
+</div>
+
+<h1>Hello</h1>
+Place a DIV, first thing, on the main page.
+z-index:999; width:100%;
+height:100%; display:none; position:absolute; top:0; left:0;  
+If you feel like getting fancy, you could set the alpha transparency of the
+div to like 50 percent or something. Then when you open the other
+window, first show this div. You will have issues with select boxes
+and other buggy things, ... the easiest way to deal with them is to
+set them to display:none while the child window is open.
+<br><a href="#" onClick="return pop()">Popup</a>
+
+	Click <a onmouseover='this.style.cursor="pointer" ' onfocus='this.blur();' onclick="document.getElementById('PopUp').style.display = 'block' " ><span style="text-decoration: underline;">here</span></a>
+		<div id='PopUp' style='display: none; position: absolute; left: 50px; top: 50px; border: solid black 1px; padding: 10px; background-color: rgb(255,255,225); text-align: justify; font-size: 12px; width: 135px;'>
+			This is a CSS Popup that can be positioned anywhere you want on the page and can contain any test and images you want.
+				<br />
+					<div style='text-align: right;'><a onmouseover='this.style.cursor="pointer" ' style='font-size: 12px;' onfocus='this.blur();' onclick="document.getElementById('PopUp').style.display = 'none' " ><span style="text-decoration: underline;">Close</span></a></div>
+						</div>
+

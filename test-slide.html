@@ -1,0 +1,34 @@
+<html>
+<head>
+	<script language="Javascript" type="text/javascript" src=jetpack.js></script>
+</head>
+<body>
+	<!--<img src=images/expand.gif onclick="ipsum1.slideIt();ipsum1.hideRest();">-->
+	<div><img src=images/expand.gif onclick="ipsum1.slideIt();">
+	<div id=testdiv1 style="width: 80px; font-size: 12px; border: 1px solid black; display:none;">
+		<div>Lorem Ipsum</div><div>Lorem Ipsum</div>
+	</div>
+	</div>
+	<script type=text/javascript>
+		var ipsum1 = new animatedDiv('ipsum1','testdiv1',500);
+	</script>
+	<br>
+	<!--<img src=images/expand.gif onclick="ipsum2.slideIt();ipsum2.hideRest();">-->
+	<img src=images/expand.gif onclick="ipsum2.slideIt();">
+	<div id=testdiv2 style="width: 80px; font-size: 12px; border: 1px solid black; display:none;">
+		<div>Lorem Ipsum</div>
+	</div>
+	<script type=text/javascript>
+		var ipsum2 = new animatedDiv('ipsum2','testdiv2',500);
+	</script>
+	<br>
+	<!--<img src=images/expand.gif onclick="ipsum2.slideIt();ipsum2.hideRest();">-->
+	<img src=images/expand.gif onclick="ipsum3.slideIt();">
+	<div id=testdiv3 style="width: 80px; font-size: 12px; border: 1px solid black; display:none;">
+		<div>Lorem Ipsum</div>
+	</div>
+	<script type=text/javascript>
+		var ipsum3 = new animatedDiv('ipsum3','testdiv3',500);
+	</script>
+</body>
+</html>

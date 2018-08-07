@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+.demo ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+.demo li { font-family: arial; cursor: pointer; font-size: 11pt; border: 1px solid #BBB; margin: 5px; padding: 5px; width: 150px; }
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script type="text/javascript">
+$( init );
+function init() {
+	$('#makeMeSortable').sortable( {
+		cursor: 'move',
+		revert: true
+	});
+	$( "ul, li" ).disableSelection();
+}
+</script>
+</head>
+<body>
+	<div class="demo">
+		<ul id="makeMeSortable">
+			<li class="ui-state-default">Pradeep Kota</li>
+			<li class="ui-state-default">Srinivas Ramachandran</li>
+			<li class="ui-state-default">Elizabeth Proctor</li>
+			<li class="ui-state-default">David Shirvanyants</li>
+			<li class="ui-state-default">Lanette Fee</li>
+			<li class="ui-state-default">Rachel Redler</li>
+			<li class="ui-state-default">Feng Ding</li>
+			<li class="ui-state-default">Onur Dagliyan</li>
+			<li class="ui-state-default">Arpit Tandon</li>
+		</ul>
+	</div>
+</body>
+</html>

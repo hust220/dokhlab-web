@@ -1,0 +1,11 @@
+<form name=logout method=POST action=logout.php>
+	<div id=ubar class="userbar">
+		<div id=cuser class=leftfl>
+			Current User :
+		</div>
+		<div class="loginpos widebuffer100"></div>
+		<div class=rightfl>
+			<div id=logout onclick="document.forms['logout'].submit();">Logout</div>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,6 @@
+The Dokholyan Laboratory invites applications for a postdoctoral researcher in the field of computational biophysics to develop novel software tools for integrated computational and experimental drug discovery. The candidate should have experience in the fields of statistical physics, biophysics, and computer science. Required skills include high-level C++ programming experience, advanced object-oriented design knowledge, an understanding of Molecular Dynamics simulation techniques and software, and fluency in the Linux platform. The ideal candidate will have experience working in a programming team and managing multi-developer projects, preferably in the development of parallelized Molecular Dynamics simulation software.
+
+UNC and the Dokholyan Laboratory are committed to employing under-privileged minorities and individuals with disabilities. We seek to increase the number of females in the STEM fields, and women are strongly encouraged to apply. 
+
+Please use the following link to apply: https://unc.peopleadmin.com/postings/46079
+

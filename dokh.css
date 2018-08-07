@@ -1,0 +1,101 @@
+a#maintext { text-decoration: none;	color: black; }
+ul#available { margin-left: 5px; margin-right: 0px;	padding-left: 10px;	text-indent: -1.2em; list-style: none; }
+ul#selected {	margin-left: 5px;	margin-right: 0px; padding-left: 10px; text-indent: -1.2em; list-style: none; }
+div#filter { width: 155px; min-height: 100px; background: #EEEEEE; font-family: Geneva, arial, helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #666666; border: 1px solid #BBBBBB; padding: 5px; text-align:center; }
+div#filterlist { text-align: left; font-size: 12px; font-weight: normal; color: black; line-height: 140%; }
+
+.fleft { float: left}
+.fright { float: right}
+
+/*------ BUTTONS ------*/
+div#admbtn { width: 150px; background: #EEEEEE; font-family: Geneva, arial, helvetica, sans-serif; font-size: 14px; border: 1px solid #BBBBBB; padding: 5px; text-align:center; }
+#abstractbtn { font-size: 11px;	font-family: Geneva, arial, helvetica, sans-serif; float: left;	padding-left: 5px; cursor: pointer; }
+#logout { font-family: Geneva, arial, helvetica, sans-serif; font-size: 11px; text-decoration: none; cursor: pointer; }
+.saveButton { cursor: pointer; border: 1px solid #AAAAAA; background: #CCCCCC; font-family: arial; font-size: 10px; margin: 5px; padding: 5px; width: 150px; }
+
+body .text { font-family: Geneva, arial, helvetica, sans-serif; font-size: 13px; }
+h3 { border: 1px solid #AAAAAA; padding: 5px; }
+.micro { font-family: Geneva, arial, helvetica, sans-serif; font-size: 10px; margin: 2px 0px 0px 0px; color: maroon; }
+.microdisp { display: none; }
+.spacer1 { font-size: 1px; min-height: 1px; }
+.spacer5 { font-size: 5px; min-height: 5px; }
+.spacer10 { font-size: 10px; min-height: 10px; }
+.spacer30 { font-size: 30px; min-height: 30px; }
+.searchbox { position: relative; left: 420px; width: 370px; background:#EEEEEE; border: 1px solid #999999; padding: 2px; }
+.button { height:20px; text-align: center; font-size: 12px; background: white; cursor: pointer; border: 1px solid #999999; text-decoration: none; }
+.keyword { width:100px; height:17px; margin:1px; font-size: 12px; background: white; border: 1px solid #999999; text-decoration: none; }
+.dropdown {	border: 1px solid #999999; text-decoration: none; width:100px; height: 17px; background-color: white; }
+.container { position: relative; width: 800px; /*	border: 1px solid #333333; */	padding: 5px; }
+.memberdiv { width: 625px; margin: 2px; border: 1px solid #BBBBBB; float: left; }
+.bufferdiv { width: 130px; /*height: 100px;*/ float: left; }
+.contentdiv { width: 625px; float: left; }
+.tabcontentdiv { width: 780px; float: left; }
+.accordionContent { border: 1px solid #AAAAAA; border-top: none; margin-top: -15px; padding: 5px 0px 10px 5px; }
+div.tabcontent { position: absolute; width: 640px; left: 140px; min-height: 200px; text-align: justify; padding: 10px; margin: 5px; font-family: Geneva, arial, helvetica, sans-serif; font-size: 15px; border: 1px solid #BBBBBB; background: #EEEEEE; }
+div.tabs { position: absolute; top: 110px; width: 150px; z-index: 200; }
+.tab { padding: 3px; font-family: Geneva, arial, helvetica, sans-serif; font-size: 13px; width: 141px; height: 25px; border-style: solid; border-color: #BBBBBB; background: white; border-width: 1px; cursor: pointer; }
+.tabActive { padding: 3px; height: 25px; width: 141px; font-family: Geneva, arial, helvetica, sans-serif; font-size: 13px; border-width: 1px 0px 1px 1px; border-style: solid; border-color: #BBBBBB; background-color: #EEEEEE; }
+.pubtype { width: 615px; height: 20px; text-align: left; padding: 2px; margin: 3px; }
+.publist { background: #EEEEEE; border: 1px solid #BBBBBB; width: 610px; font-size: 13px; font-family: Geneva, arial, helvetica, sans-serif; text-align: justify; margin: 2px; padding: 5px; }
+.rightcol { float: left; padding: 2px; text-align: center; }
+.login { width: 300px; float: left 	margin: 5px 150px 5px 150px; font-family: Geneva, arial, helvetica, sans-serif; font-size: 13px; }
+.loginpos { margin: 0px 0px 0px 2px; float: left; }
+.loginerr { width: 15px; height: 15px; display: none; }
+.admin-content { width: 500px; float: left; margin: 5px 50px 5px 50px; font-family: arial, helvetica, sans-serif; font-size: 13px; }
+.fset { font-size: 12px; border-style: solid; border-color: #BBBBBB; border-width: 1px; }
+.input-text { height:17px; margin:1px; font-size: 12px; background: white; border: 1px solid #999999; text-decoration: none; }
+.select-box { border: 1px solid #999999; text-decoration: none; height: 17px; background-color: white; }
+.datepicker { position: absolute; left: 0px; width: 100%; display: none; }
+.userbar { width: 794px; min-height: 10px; padding: 3px; border: 1px solid #BBBBBB; background: #EEEEEE; font-family: Geneva, arial, helvetica, sans-serif; font-size: 11px; float: left; display: none; }
+.leftfl  { float: left; }
+.rightfl { float: right; }
+.filterimg { cursor: pointer; border: 0; }
+.more { width: 60px; cursor: pointer; color: #BBBBBB; }
+.less { width: 60px; cursor: pointer; color: #BBBBBB; }
+.mainhr { border: none 0; height: 1px; width: 90%; border-top: 1px dashed #BBBBBB; }
+.slidediv {	width: 145px;	border: 1px solid #BBBBBB; display: none; }
+
+/*------ BUFFERS ------*/
+div#buffer { min-height: 30px; }
+div#buffer50 { min-height: 50px; }
+div.widebuffer100 { width: 100px; float: left; }
+div.widebuffer50 { width: 50px; float: left; }
+
+/*------ CALENDAR STYLES ------*/
+.calendar { border-width: 0 0 1px 1px; font-size: 12px; border-style: solid; border-color: #555555; font-family: arial, helvetica, sans-serif; border-spacing: 0; border-collapse: collapse; }
+.calendar-td	{ border-width: 1px 1px 0 0; border-style: solid; border-color: #555555; background-color: #CCCCCC; }
+.calendar-blank	{ background-color: #EEEEEE; border-width: 1px 1px 0 0; border-style: solid; border-color: #555555; }
+.calendar-day, .calendar-today, .calendar-event, .calendar-weekend	{ padding: 2px; border-width: 0px 0px 1px 0px; border-style: solid; border-color: #555555; font-size: 12px; background-color: #AAAAAA; }
+.calendar-event-body, .calendar-weekend-body	{ text-align: left; background-color: #BBBBBB; min-height: 90px; }
+.calendar-day-body	{ background-color: #DDDDDD; min-height: 90px; }
+.calendar-days	{ background-color: #DDDDDD;  }
+.calendar-today	{ font-weight: bold; background-color: #777777;  }
+.calendar-today-body	{ text-align: left; background-color: #AAAAAA; min-height: 90px; }
+.calendar-month	{ background-color: #888888; border-width: 1px 1px 0px 1px; border-style: solid; border-color: #333333; color: #EEEEEE; padding: 2px 5px 2px 5px; font-size: 15px; font-weight: bold; }
+.calendar-next	{ color: #EEEEEE; text-decoration: none; }
+.calendar-prev	{ color: #EEEEEE; text-decoration: none; }
+.mini-cal { margin-left: 40%; margin-right: 35%; width: 25%; background-color: #BBBBBB; border-width: 0px 0px 1px 1px; border-style: solid; border-color: #999999; }
+.mini-cal-month	{ background-color: #888888; border-width: 1px 1px 1px 1px; border-style: solid; border-color: #333333; color: #EEEEEE; font-size: 15px; font-weight: bold; }
+.mini-cal-cell	{ padding: 2px; border-width: 1px 1px 0px 0px; border-style: solid; border-color: #999999; }
+a.info { padding: 2px; position:relative; z-index:24; color:#000; text-decoration:none; }
+a.info:hover { z-index:25; }
+a.info span{ display: none }
+a.info:hover span{ display:block; position:absolute; top:2em; left:2em; width:10em; padding: 2px; border:1px solid #333; background-color:#EEE; color:#000; text-align: center}
+.genText { color: black; font-family: arial; font-size: 11pt }
+.lnText { cursor: pointer; color: black; font-family: arial; font-size: 11pt }
+.genBorderGray  { border: 2px solid gray; margin: 3px 3px 3px 3px; padding: 1px 1px 1px 1px; }
+.genBorderBlack { border: 1px solid black }
+/*.gsc-results { background-color: #DDDDDD; }*/
+
+/*------  NEWS TICKER ------*/
+.fieldset { border: 1px solid #666666; margin: 0px; padding: 0px }
+.legend { border: 1px solid #666666; text-align: right; color: #333333 }
+.newsticker { border: 1px solid #666666; background: #CCC; margin-top: 20px; margin-left: 5px; font-size: 11px }
+ul#ticker { width: 225px; height: 125px; overflow: hidden; margin: 0px; padding: 0px; }
+ul#ticker li { width: 210px; height: 110px; padding: 7px; }
+ul#ticker li a { color: #444; padding: 3px; text-decoration: none }
+ul#ticker li span { display: block; color: #000 }
+#newscontroller { padding: 3px; border-top: 1px dashed #444; height: 16px; text-align:center;}
+.imgbtn { cursor: pointer }
+
+.cleardiv { clear: both; }

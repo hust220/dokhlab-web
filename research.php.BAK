@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<link rel=stylesheet href=dokh.css type=text/css>
+		<script type=text/javascript src=pubs.js></script>
+		<script type=text/javascript src=jetpack.js></script>
+		<script type=text/javascript language=javascript src=lytebox.js></script>
+		<link rel="stylesheet" href="lytebox.css" media="screen" type="text/css" />
+		<title>
+			Dokholyan Group - Research
+		</title>
+	</head>
+	<body>
+<?php 
+	include "head.php";
+?>
+	<div class=container>
+		<div align=right style="margin-right:5px;">
+			<img src=images/research.gif>
+		</div>
+		<div class=spacer5></div>
+		<div class=spacer10></div>
+		<div class=contentdiv style="width: 785px;">
+			<div class=publist style="width: 750px; padding: 5px 20px 5px 20px;">
+			<div class=spacer10></div>
+			<!-- Topic 1 -->
+			<img src=images/collapse.gif id=imgtopic1 style="cursor:pointer;" border=0 onclick="slide_topic1.slideIt();"> <strong>Protein Aggregation</strong>
+			<div id=divtopic1 style="margin: 5px; padding: 5px 10px 5px 10px; width=750px; border: 1px solid #BBBBBB; display: block;">
+				<div>	   
+					<p>Amyloid fibril is the insoluble aggregate of usually solvable proteins or polypeptides. There are over 16 types of human diseases known to be associated with amyloidogenesis, such as Alzheimer, light-chain amyloidosis, spongiform encephalopathies, amyotropic lateral sclerosis. Although many advances have been made in structural characterization of amyloid fibrils and the mechanism of their formation, many aspects of this process remain unclear. Due to difficulties in crystallizing amyloid fibrils, the detailed intrinsic structure has yet to be determined from x-ray diffraction. Lack of knowledge of the detailed structure of amyloid fibril makes it difficult to understand aggregation mechanisms, and more importantly the origin of toxicity of many of such aggregates.</p>
+					<p>Due to limitations in computation power to study large protein systems in molecular dynamics simulations, We will employ the discrete molecular dynamics algorithm. We intend (i) to reconstruct macromolecular assemblies of two and more identical proteins in molecular dynamics simulations; (ii) to reconstruct the phase diagram of aggregation (the dependence of the speed of aggregation on the environment); (iii) to identify the mechanism of protein aggregation; (iv) to test the predicted from molecular dynamics simulations macromolecular assemblies via experimental collaborations; and (v) to study the toxicity of the predicted aggregates in vivo. All of these steps are vital for understanding the development of complex diseases, and specifically steps (i) and (ii) for identifying effective therapies.</p>
+				</div>
+			</div>
+			<script type=text/javascript>
+				var slide_topic1 = new animatedDiv('slide_topic1','divtopic1',500,'imgtopic1',true);
+			</script>
+			<!-- End of Topic 1 -->
+			<div class=spacer10></div>
+			<!-- Topic 2 -->
+			<img src=images/collapse.gif id=imgtopic2 style="cursor:pointer;" border=0 onclick="slide_topic2.slideIt();"> <strong>Protein Engineering</strong>
+			<div id=divtopic2 style="margin: 5px; padding: 5px 10px 5px 10px; width=750px; border: 1px solid #BBBBBB; display: block;">
+				<div>	   
+					<p>The solution of the protein design problem will impact modern medicine, biology, and physics. One important clinical outcome would be effective drug design. There has been only limited success in experimental approaches to protein design, providing polypetides that could fold into compact but mostly disordered conformations. The bottleneck in the protein design problem is that the number of sequences grows exponentially with the sequence length of the protein. Convincing success in the protein design problem may come from reliable theoretical approaches that make it possible to find a sequence that folds to a unique stable native structure. We will use a multidisciplinary approach to engineer proteins with desired physical and chemical properties and a specific biological function. Due to the complexity of the task, the proposed method unifies ideas from physics, chemistry, biology and bioinformatics.</p>
+				</div>
+			</div>
+			<script type=text/javascript>
+				var slide_topic2 = new animatedDiv('slide_topic2','divtopic2',500,'imgtopic2',true);
+			</script>
+			<!-- End of Topic 2 -->
+			<div class=spacer10></div>
+			<!-- Topic 3 -->
+			<img src=images/collapse.gif id=imgtopic3 style="cursor:pointer;" border=0 onclick="slide_topic3.slideIt();"> <strong>Protein Evolution</strong>
+			<div id=divtopic3 style="margin: 5px; padding: 5px 10px 5px 10px; width=750px; border: 1px solid #BBBBBB; display: block;">
+				<div>	   
+					<p>The bottom up approach to understanding the evolution of organisms is by studying molecular evolution. With the large number of protein structures identified in the past decades, we discover peculiar patterns that nature imprints on protein structural space in the course of evolution. By understanding the cause of these patterns, we attempt to glance at the very origin of life.</p>
+				</div>
+			</div>
+			<script type=text/javascript>
+				var slide_topic3 = new animatedDiv('slide_topic3','divtopic3',500,'imgtopic3',true);
+			</script>
+			<!-- End of Topic 3 -->
+			<div class=spacer10></div>
+			</div>
+					<div style="width:80px; font-family: Geneva, arial, sans-serif; font-size: 12px;position:relative; margin: 5px 0px 0px 722px;"><a id=maintext href=research.php>Read More...</a></div>
+		</div>
+	</div>
+	</body>
+</html>

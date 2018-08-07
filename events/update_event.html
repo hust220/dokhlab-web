@@ -1,0 +1,27 @@
+<html>
+<head>	
+<script type="text/javascript">
+function check(){
+//alert ("test");
+if (document.lab.choose[0].checked) {
+//alert ("attach");
+document.lab.action = "update_schedule.php";
+}
+else if (document.lab.choose[1].checked) {
+//alert ("with res");
+document.lab.action = "update_jc.php";
+}
+}
+</script>
+</head>
+
+<body>
+<form enctype="multipart/form-data" action="update_schedule.php" method="post" name="lab" onsubmit="return check();">
+Password:&nbsp;<input name="code" type="password" size="8"><br><br>
+<input type="radio" name="choose" checked>Update GM schedule&nbsp;<br>
+<input type="radio" name="choose">Update JC schedule&nbsp;<br>
+<!-- <a href="javascript:document.lab.submit();">Update events</a> -->
+ <input type="submit" value="update"> 
+</form>
+</body>
+</html>

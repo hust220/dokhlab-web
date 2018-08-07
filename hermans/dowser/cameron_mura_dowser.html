@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://mccammon.ucsd.edu/~cmura/DOWSER/index.html"><html xml:lang="en" lang="en"><head><!-- <?xml version="1.1" encoding="ISO-8859-1"?> --><!-- Owner, cmura@ucsd.edu, Cameron Mura -->
+    
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Cameron Mura: DOWSER page (mirror at UNC)</title>
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="Cameron_Mura_DOWSER_files/dowser.css"><!--  <base target="_blank" />	-->
+  
+  <style type="text/css">
+		body    { background-color: white;
+			  color: rgb(30,30,130);
+			  font-family: helvetica,arial,sans-serif;
+		}
+		img { 	width:250px; 
+			border: 1px dotted red;	
+		}
+		em 	{ color: green; }
+		a:link    { color: rgb(70,70,200); text-decoration: underline; }
+		a:visited { color: rgb(120,70,200); }
+		a:hover   { color: rgb(50,50,255); background-color: rgb(215, 235, 204); text-decoration: none; }
+		a:active  { color: rgb(255,0,0); text-decoration: underline; }
+		
+		/*a:visited { color: #6a5acd }	*/
+		/*a:hover  { background-color:#445556; text-decoration: none; color: white; }	*/
+  </style>
+  <script type="text/javascript" src="Cameron_Mura_DOWSER_files/pix.js"></script></head>
+
+
+
+<body>
+
+  <div style="border-top: 3px double rgb(30, 30, 130); font-weight: bold; font-size: larger;">
+      Overview of DOWSER and available DNA-related files
+  </div>
+
+  <div class="narrative_txt">
+    <BR/>...<P/>
+    <font color="darkblue">
+    A current limitation of the DOWSER program is its inability to handle PDB input files containing nucleic 
+    acid. Therefore, a pair of DOWSER-specific data files has been constructed in order to enable DOWSER to 
+    properly treat input files containing DNA (RNA another day!). These two files provide: <i>(i)</i> the 
+    atomic dictionary and residue definitions for DNA (thereby extending DOWSER's built-in <tt>atomdict.db</tt>); 
+    and <i>(ii)</i> the DNA-specific Lennard-Jones nonbonded interaction parameters and atomic radii that are
+    used for molecular surface calculations (thereby extending DOWSER's built-in <tt>atomparms.db</tt>). 
+    For the sake of consistency with the current DOWSER parameter set for proteins, values for all
+    nonbonded parameters for DNA atoms (<i>i.e.</i>, atomic partial charges and LJ constants) were drawn
+    from the Gromos FF, as implemented in the latest GROMACS (v3.2.1) MD simulation package (<i>e.g.</i>, 
+    see the <tt>ffgmx*</tt> files for more specific information).  
+    </font>
+  </div>
+
+  There are two approaches to utilizing the DNA-specific files provided here: <i>(i)</i> one may either 
+  download the dictionary and parameter files (below) and then use DOWSER with the "<tt>-atomtypes</tt>" 
+  and "<tt>-atomparms</tt>" command-line switches; or <i>(ii)</i> one may directly modify these two data 
+  files in the DOWSER source code by applying a patch file (below).
+  <br>
+  <br>
+
+  For route <i>(i)</i>, save the following two files in the "<tt>DATA/</tt>" subdir of your local DOWSER 
+  installation (<i>i.e.</i>, value of env variable <tt>$DOWSER</tt>), and then run DOWSER as shown below:
+  <ul>
+      <li>
+      	<b><a class="redttlinks" href="Cameron_Mura_DOWSER_files/mydna_dict.db">mydna_dict.db</a></b> -- an atomic dictionary file for DNA
+      </li>
+      <li style="padding-top: 2px;">
+      	<b><a class="redttlinks" href="Cameron_Mura_DOWSER_files/mydna_parms.db">mydna_parms.db</a></b> -- a nonbonded parameters file for DNA
+      </li>
+      <li style="padding-top: 2px;">Sample execution:
+        <p class="email" style="padding: 10px; margin-right: 5%;">$] $DOWSER/bin/dowser some_file_with_DNA.pdb -atomtypes $DOWSER/DATA/mydna_dict.db -atomparms $DOWSER/DATA/mydna_parms.db</p>
+      </li>
+  </ul>
+
+  <br>
+  For route <i>(ii)</i>, simply go to the root of your DOWSER source tree and apply the following patch file 
+  (which was produced in unified diff format). This will allow DOWSER to be run on DNA-containing PDB files 
+  without having to specify the "<tt>-atomtypes</tt>" and "<tt>-atomparms</tt>" options. 
+  <ul>
+      <li>
+      <b><a class="redttlinks" href="Cameron_Mura_DOWSER_files/mydna_DOWSER.patch">mydna_DOWSER.patch</a></b> -- patch file for DOWSER source
+      </li><li style="padding-top: 2px;">Download the patch to the proper subdir and apply it:
+      <p class="email" style="padding: 10px; margin-right: 5%;">
+        $] cd $DOWSER/..<br>
+	$] wget mydna_DOWSER.patch<br>
+	$] patch -p0 &lt; mydna_DOWSER.patch </p>
+      </li>
+  </ul>
+
+  <br>
+  <!-- <span style="color:red;font-weight:bold;">NOTE:</span><br />  -->
+  For both routes <i>(i)</i> and <i>(ii)</i>, DNA "<span style="font-size: 120%; font-family: courier;">ATOM</span>" 
+  lines in the input PDB file must adhere to the following two conventions:
+  <ol>
+      <li>
+      Deoxynucleotide residue names should be specified as DX (right-justified in the 3-character wide
+      residue name column), so change GUA to DG, ADE to DA, CYT to DC, THY to DT. 
+      Furthermore, 5' dephosphorylated residues should be specified as DX5 (so DG5, DA5, DT5, DC5 for 5' 
+      termini).
+      </li>
+      <li>
+      For the DNA glycosidic atom names, all apostrophes 
+      ("<span style="font-size: 120%; font-family: courier; font-weight: bold;">'</span>") should be changed to asterisks 
+      ("<span style="font-size: 120%; font-family: courier; font-weight: bold;">*</span>").
+      </li>
+  </ol>
+  <br>
+
+
+  <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+      <tbody>
+	  
+	<tr style="vertical-align: top;">
+	    <td colspan="3" style="border-top: 3px double rgb(30, 30, 130); padding-top: 3px; padding-bottom: 10px;">
+		<!-- <hr /> -->
+		<span style="font-weight: bold; font-size: larger;">Sample images from the application of DOWSER to DNA-containing input structures</span><br>
+		<span style="font-size: small; color: rgb(0, 136, 51);">(click on these thumbnail images for larger-sized pop-up images)</span>
+	    </td>
+	</tr>	
+	
+	<tr style="vertical-align: top;">
+	    <td colspan="3" style="border-top: 1px dotted rgb(30, 30, 130); padding-top: 1px; padding-bottom: 5px;">
+		<!-- <hr /> -->
+		Sample output produced by using DOWSER with the above nucleic acid-specific dictionary and parameter data files. 
+		The input in this illustrative example was a simple 20-nt DNA structure which was artifically distorted (by kinking
+	        the deoxyribophosphate backbone) so as to introduce some space between the strands (primarily in the left two-thirds 
+		of the helix, as illustrated in the left-most panel), thereby leading to successful placement of a few waters by DOWSER:
+	    </td>
+	</tr>	
+	
+	<tr style="vertical-align: top;">
+	    <td colspan="1" style="padding-top: 5px; padding-right: 5px; width: 33%;">
+		<a href="#" onclick='openMovie("dowse_dna_view1.png"); return false;'>
+		    <img src="Cameron_Mura_DOWSER_files/dowse_dna_view1.png" style="width: 100%;" alt="[image]"></a>
+	    </td>
+	    <td colspan="1" style="padding-top: 5px; padding-right: 5px; width: 33%;">
+		<a href="#" onclick='openMovie("dowse_dna_view2.png"); return false;'>
+		    <img src="Cameron_Mura_DOWSER_files/dowse_dna_view2.png" style="width: 100%;" alt="[image]"></a>
+	    </td>
+	    <td colspan="1" style="padding-top: 5px; padding-right: 5px; width: 33%;">
+		<a href="#" onclick='openMovie("dowse_dna_view1_zoom.png"); return false;'>
+		    <img src="Cameron_Mura_DOWSER_files/dowse_dna_view1_zoom.png" style="width: 100%;" alt="[image]"></a>
+	    </td>
+	</tr>
+	
+	<tr style="vertical-align: top;">
+	    <td colspan="1" style="padding-top: 5px; padding-right: 5px; width: 33%;">
+		<a href="#" onclick='openMovie("dowserx_dna_view1.png"); return false;'>
+		    <img src="Cameron_Mura_DOWSER_files/dowserx_dna_view1.png" style="width: 100%;" alt="[image]"></a>
+	    </td>
+	    <td colspan="2" style="padding-top: 0px; padding-right: 0px; width: 66%;">
+		<table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+		    <tbody>
+		    <tr>
+			<td style="vertical-align: top; padding-top: 15px; text-align: justify;">
+			    The image directly to the left was produced by application of the "<tt>dowserx</tt>" command, 
+			    thus resulting in the identification of many more interstitial waters.
+			</td>
+			<td style="width: 51%;"></td>
+		    </tr>
+		    </tbody>
+		</table>
+	    </td>
+	</tr>
+
+	<tr><td style="padding-top: 15px;"></td></tr>
+
+	<tr style="vertical-align: top; padding-top: 20px;">
+	    <td colspan="4" style="border-top: 1px dotted rgb(30, 30, 130); padding-top: 2px; padding-bottom: 5px;">
+		<!-- <hr /> -->
+		The illustrations below are from a more realistic sample application of DOWSER with the above DNA-specific 
+		data files, using a relatively large protein-DNA complex as the target structure for solvation. Note DOWSER's
+		careful placement of a bridging water between a protein side chain (Lys) and DNA base (Ade) in the zoomed-in 
+		view (Lys...Ade in rightmost panel). 
+	    </td>
+	</tr>	
+
+	<tr style="vertical-align: top;">
+	    <td colspan="1" style="padding-top: 5px; padding-right: 5px;">
+		<a href="#" onclick='openMovie("dowse_ProtDNA_view1.png"); return false;'>
+		    <img src="Cameron_Mura_DOWSER_files/dowse_ProtDNA_view1.png" style="width: 100%;" alt="[image]"></a>
+	    </td>
+	    <td colspan="1" style="padding-top: 5px; padding-right: 5px;">
+		<a href="#" onclick='openMovie("dowse_ProtDNA_view2zoomed.png"); return false;'>
+		    <img src="Cameron_Mura_DOWSER_files/dowse_ProtDNA_view2zoomed.png" style="width: 100%;" alt="[image]"></a>
+	    </td>
+	    <td colspan="1" style="padding-top: 5px; padding-right: 5px;">
+		<a href="#" onclick='openMovie("dowse_ProtDNA_view3zoomed.png"); return false;'>
+		    <img src="Cameron_Mura_DOWSER_files/dowse_ProtDNA_view3zoomed.png" style="width: 100%;" alt="[image]"></a>
+	    </td>
+	</tr>
+  </tbody>
+  </table>
+
+  <hr>
+  <!-- "Page last touched" footer section -->
+  <table class="footer" cellpadding="1" cellspacing="1" style="border-width: 0px 0pt 0pt; background-color: rgb(230, 230, 230); border-top-style: dotted; width: 100%;">
+  	<tbody><tr>
+  		<td>
+  		<script language="JavaScript" type="text/javascript" src="Cameron_Mura_DOWSER_files/last_modified.js">
+  		</script>Page last touched <tt>Tuesday, March 08, 2005 14:11:25</tt>
+
+  	
+  		<noscript>
+  		&nbsp;Page last touched 07/24/2004.
+  		</noscript>
+  		</td>
+  
+  		<td style="text-align: right;">
+  			<!-- css stuff -->
+  			[<a href="http://validator.w3.org/check/referer">XHTML 1.0</a>]
+  		</td>
+  	</tr>
+  	<tr>
+	    <td>© 2005 <a href="http://mccammon.ucsd.edu/%7Ecmura">Cameron Mura</a> (<a href="mailto:cmura@mccammon.ucsd.edu?subject=Cameron%20Mura:%20DOWSER%20page">&lt;cmura |at| mccammon |dot| ucsd |dot| edu&gt;</a>)
+	    </td>
+	    <td style="text-align: right;">
+		[<a href="http://jigsaw.w3.org/css-validator/validator?uri=http://mccammon.ucsd.edu/%7Ecmura/DOWSER">CSS</a>]
+	    </td>
+  	</tr>
+  </tbody></table>
+	
+  <script type="text/javascript">
+	<!-- hide from non-JS-enabled browsers
+	/* JAVASCRIPT THAT'S SPECIFIC TO THIS WEBPAGE. THE REST OF THE REQUIRED JAVASCRIPT COMES FROM THE "pix.js" FILE. */
+		preloadMovie("dowse_dna_view1.png");
+		preloadMovie("dowse_dna_view2.png");
+		preloadMovie("dowse_dna_view1_zoom.png");
+		preloadMovie("dowserx_dna_view1.png");
+		preloadMovie("dowse_ProtDNA_view1.png");
+		preloadMovie("dowse_ProtDNA_view2zoomed.png");
+		preloadMovie("dowse_ProtDNA_view3zoomed.png");
+	// show -->
+  </script>
+
+</body></html>
